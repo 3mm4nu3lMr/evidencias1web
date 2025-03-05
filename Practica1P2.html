@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Práctica 1 Formularios</title>
+	<style type="">
+	table{
+		margin: auto;
+	}tr{
+		text-align: left;
+		padding: 15px;
+	}
+	td{
+		text-align: left;
+		padding: 15px;
+		
+	}
+	
+	
+</style>
+</head>
+
+<header>
+	<h1 style="text-align: center;">Amazon México</h1>
+	<h2 style="text-align: center;">Compras Online</h2>
+</header>
+<body style="background: lightblue;">	
+		<form>
+		<fieldset>
+		<legend>Información general del cliente</legend><br/>
+	<table>
+		<tbody>
+		
+		<td>
+			<label for="nombre">Nombre: </label>
+			<input type="text" name="nombre" id="nombre" placeholder="Nombre" size="20" title="Nombre" required>
+		</td>
+		<td>
+			<label for="Ap">Apellido paterno: </label><br/>
+			<input type="text" name="Ap" id="Ap" placeholder="Apellido paterno" size="20" title="Apellido paterno">
+		</td>
+		<td>
+			<label for="Am">Apellido materno: </label><br/>
+			<input type="text" name="Am" id="Am" placeholder="Apellido materno" size="20" title="Apellido materno"><br/><br/>
+		</td>
+		
+		<tr>
+		<td>
+			<label for="usuario">Nombre de usuario: </label><br/>
+			<input type="text" name="usuario" id="usuario" placeholder="Usuario" size="20" title="Usuario">
+		</td>
+		<td>
+			<label for="pass">Password: </label>
+			<input type="password" name="pass" id="pass" size="20" maxlength="20" placeholder="Password">
+		</td>
+		<td>
+			<label for="Fechareg">Fecha de registro: </label>
+			<input type="date" name="Fechareg" id="Fechareg">
+		</td>
+		</tr>	
+		
+		
+		</tbody>
+	</table>
+</fieldset>
+</form>
+
+	<form>
+		<fieldset>
+			<legend>Datos para facturar</legend>
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<label>País</label><br/>
+							<select name="pais" id="pais" size="3" >
+								<option>México</option>
+								<option>Canadá</option>
+								<option>Reino Unido</option>
+								<option>Brasil</option>
+								<option>España</option>
+
+						</td>
+						<td>
+							<label>Ciudad</label><br/>
+							<select name="ciudad" id="ciudad" size="3" >
+								<option>San Luis Potosí</option>
+								<option>Monterrey</option>
+								<option>Ciudad Valles</option>
+								<option>Madrid</option>
+								<option>Rio de Janeiro</option>
+								<option>Londres</option>
+
+						</td>
+						<td>
+							<label for="calle">Calle: </label><br/>
+							<input type="text" name="calle" id="calle" placeholder="Calle" size="20" title="Calle">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="casa">Número de casa: </label><br/>
+							<input type="text" name="casa" id="casa" placeholder="Número exterior" size="20" title="Número exterior">
+						</td>
+						<td>
+							<label for="col">Colonia: </label><br/>
+							<input type="text" name="col" id="col" placeholder="Colonia" size="20" title="Colonia">	
+						</td>
+						<td>
+							<label for="mail">E-mail: </label><br/>
+							<input type="text" name="mail" id="mail" placeholder="E-mail" size="20" title="E-mail">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="rfc">R.F.C </label><br/>
+							<input type="text" name="rfc" id="rfc" placeholder="R.F.C" size="20" title="R.F.C">
+						</td>
+						<td>
+							<label for="cp">C.P: </label><br/>
+							<input type="text" name="cp" id="cp" placeholder="Código Postal" size="20" title="Código Postal">
+						</td>
+						<td>
+							<input type="checkbox" name="termcond" id="termcond" value="1" checked>
+							<label for="termcond">Acepto términos y condiciones</label></br>
+							<input type="submit" name="enviar" id="enviar" value="Enviar datos">
+							<input type="submit" name="restablecer" id="restablecer" value="Restablecer"></br>
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</form>
+	<h3 style="text-align: right;">Marzo, 2025, SLP</h3>
+</body>
+</html>
