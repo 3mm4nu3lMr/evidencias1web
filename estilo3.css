@@ -32,10 +32,10 @@ li a.activo{
     margin-left: 25%;
     padding: 12px;
 }
-/*
+
 @font-face {
     font-family: "fuente1";
-    src: url(Pacifico/Pacifico-Regular.ttf) format("truetype");*/
+    src: url(Pacifico/Pacifico-Regular.ttf) format("truetype");
 }
 p{
     text-align: justify;
