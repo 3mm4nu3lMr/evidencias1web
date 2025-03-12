@@ -1,0 +1,50 @@
+ul{
+    list-style-type: none;
+    width: 20%;
+    /*background-color: rgb(169, 235, 255);*/
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    position: fixed;
+    overflow: auto; /*colocar la barra de navegacion*/
+    
+}
+li a{
+    display: block; /* display: area en donde se maneja con hipervinculo*/
+    background-color: lightcoral;
+    padding: 12px;
+    text-decoration: none;
+    font-family: arial,Verdana, Tahoma, sans-serif;
+
+}
+li a:hover:not(.activo){
+    background-color: rgb(255, 0, 0);
+    color: white;
+    
+
+}
+li a.activo{
+    background-color: red;
+    color: white;
+}
+.capa1{
+    margin-left: 25%;
+    padding: 12px;
+}
+/*
+@font-face {
+    font-family: "fuente1";
+    src: url(Pacifico/Pacifico-Regular.ttf) format("truetype");*/
+}
+p{
+    text-align: justify;
+    font-family: "Caveat";
+}
+h1{
+    font-family: "fuente1", cursive;
+    font-size: 30px;
+}
+h2{
+    font-family: "Pacifico", cursive;
+}
