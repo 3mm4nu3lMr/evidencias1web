@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OXXO - Tienda de Abarrotes</title>
+    <style>
+        /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos para la sección Hero */
+.hero {
+    background-image: url('https://cdn-3.expansion.mx/dims4/default/bcebf13/2147483647/strip/true/crop/1800x1200+0+0/resize/1200x800!/format/webp/quality/60/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F1b%2Fdd%2F9adc285c46c39b37b35e48e098d9%2Foxxo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 10px; /* Aumenté el padding vertical */
+    height: 70vh; /* Aumenté la altura al 80% del viewport */
+    position: relative; /* Necesario para posicionar la capa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.hero-content {
+    position: relative; /* Asegura que el contenido esté sobre la capa */
+    z-index: 1; /* Coloca el contenido por encima de la capa */
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+.hero .btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Estilos para la sección de productos */
+.productos, .ofertas {
+    padding: 20px;
+    text-align: center;
+}
+
+.productos h2, .ofertas h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.productos-container, .ofertas-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.producto, .oferta {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.producto img, .oferta img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.producto h3, .oferta h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.producto p, .oferta p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>OXXO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div> <!-- Capa semitransparente -->
+        <div class="hero-content">
+            <h2>Bienvenido a OXXO</h2>
+            <p>A La Vuelta De Tú Vida</p>
+            <a href="#productos" class="btn">Ver Productos</a>
+        </div>
+    </section>
+
+    <section id="productos" class="productos">
+        <h2>Productos Destacados</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="https://paginacentral.com.mx/wp-content/uploads/2024/10/sabritas-780x470.jpg" alt="Sabritas">
+                <h3>Sabritas</h3>
+                <p>$18.00</p>
+            </div>
+            <div class="producto">
+                <img src="https://files.merca20.com/uploads/2022/07/oxxo-sprite-1.jpg" alt="Sprite">
+                <h3>Sprite</h3>
+                <p>$15.00</p>
+            </div>
+            <div class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7T105yHRR0Tu5INm9AHUIy7Pkp9jvFbKViA&s" alt="Coca-Cola">
+                <h3>Panaderia</h3>
+                <p>$25.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ofertas" class="ofertas">
+        <h2>Ofertas Especiales</h2>
+        <div class="ofertas-container">
+            <div class="oferta">
+                <img src="https://static.promodescuentos.com/threads/raw/default/507493_1/re/1024x1024/qt/60/507493_1.jpg" alt="Promoción 1">
+                <h3>2x1 en Botanas</h3>
+                <p>$25.00</p>
+            </div>
+            <div class="oferta">
+                <img src="https://cazaofertas.com.mx/wp-content/uploads/2020/03/Oxxo-Promo-230320-29-853x1024.jpg" alt="Promoción 2">
+                <h3>Descuento en Bebidas</h3>
+                <p>$30.00</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>Elaborado por:</p>
+        <p>Emmanuel Moreno Rivera 186916</p>
+        <p>Juan Fernando Sanchez Flores 186790</p>
+        <p>&copy; 2025 0XX0. "Todos los derechos reservados".</p>
+    </footer>
+</body>
+</html>
