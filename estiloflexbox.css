@@ -1,0 +1,43 @@
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+.contenedor{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+.encabezado{
+	padding: 15px;
+	background: darkgray;
+	text-align: center;
+	font-size: 18px;
+}
+.contenido{
+	display: flex;
+	
+	flex-direction: space-between;
+	flex: 1;
+}
+.caja{
+	border: 1px solid gray;
+	margin: 15px;
+	padding: 20px;
+	flex: 1;
+	background: lightgray;
+	box-shadow: 5px 5px black; /*Utilizada para dar sombra si los valores positivos (derecha y abajo), negativos (izquierda, arriba)*/
+	border-radius: 2px;
+}
+.pie{
+	background: blue;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+}
+@media(max-width:500px){
+	.contenido{
+		flex-direction:column;
+		
+	}
+}
