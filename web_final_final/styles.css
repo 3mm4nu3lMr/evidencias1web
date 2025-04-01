@@ -1,0 +1,491 @@
+/* Estilos base para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Fuente principal */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina relleno por defecto */
+    background-color: #adadad; /* Color de fondo gris claro */
+    color: #333; /* Color de texto principal */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #222; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrado de texto */
+    padding: 1.5em 0; /* Relleno superior e inferior */
+    font-size: 1.5em; /* Tamaño de fuente aumentado */
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style: none; /* Elimina viñetas de lista */
+    padding: 0; /* Elimina relleno por defecto */
+    display: flex; /* Diseño flexible */
+    justify-content: center; /* Centra elementos horizontalmente */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+nav ul li {
+    display: inline; /* Muestra elementos en línea */
+}
+
+nav ul li a {
+    color: white; /* Color de texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para la sección Hero */
+.hero {
+    background-image: url('Designer.jpeg'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el espacio */
+    background-position: center; /* Centra la imagen */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrado de texto */
+    padding: 60px 10px; /* Relleno interno */
+    height: 60vh; /* Altura relativa al viewport */
+    display: flex; /* Diseño flexible */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    position: relative; /* Posicionamiento relativo */
+}
+
+/* Capa semitransparente para mejorar legibilidad */
+.hero-overlay {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alineado arriba */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+}
+
+/* Contenido de la sección Hero */
+.hero-content {
+    position: relative; /* Posicionamiento relativo */
+    z-index: 1; /* Asegura que esté sobre la capa */
+}
+
+.hero h2 {
+    font-size: 3em; /* Tamaño de fuente grande */
+    margin: 0; /* Sin márgenes */
+}
+
+.hero p {
+    font-size: 1.5em; /* Tamaño de fuente mediano */
+    margin: 10px 0 20px; /* Márgenes superior e inferior */
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px; /* Relleno interno */
+}
+
+/* Sección de introducción */
+.intro {
+    text-align: center; /* Centrado de texto */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.intro h2 {
+    font-size: 24px; /* Tamaño de fuente */
+    color: #222; /* Color de texto oscuro */
+}
+
+/* Estilos para grids (curiosidades y teorías) */
+.grid-curiosidades, .grid-teorias {
+    display: flex; /* Diseño flexible */
+    flex-wrap: wrap; /* Permite múltiples líneas */
+    justify-content: center; /* Centrado horizontal */
+    gap: 15px; /* Espacio entre elementos */
+    padding: 20px; /* Relleno interno */
+}
+
+/* Estilos para tarjetas */
+.card {
+    background: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 15px; /* Relleno interno */
+    text-align: center; /* Centrado de texto */
+    width: 250px; /* Ancho fijo */
+    cursor: pointer; /* Cursor tipo pointer */
+    transition: transform 0.3s ease; /* Transición suave */
+    overflow: hidden; /* Oculta contenido que sobresale */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de escala al hover */
+}
+
+.card img {
+    width: 100%; /* Ancho completo */
+    height: 150px; /* Altura fija */
+    border-radius: 8px; /* Bordes redondeados */
+    object-fit: cover; /* Ajuste de imagen */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.card h3 {
+    margin: 10px 0; /* Márgenes superior e inferior */
+    font-size: 1.2em; /* Tamaño de fuente */
+}
+
+/* Estilos para popups/overlays */
+.overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posicionamiento fijo */
+    top: 0; /* Alineado arriba */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+}
+
+.popup {
+    background: white; /* Fondo blanco */
+    padding: 20px; /* Relleno interno */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centrado de texto */
+    width: 80%; /* Ancho relativo */
+    max-width: 400px; /* Ancho máximo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    position: relative; /* Posicionamiento relativo */
+}
+
+.popup h2 {
+    margin-top: 0; /* Sin margen superior */
+}
+
+.popup img {
+    width: 100%; /* Ancho completo */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.close-btn {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px; /* Distancia desde arriba */
+    right: 15px; /* Distancia desde la derecha */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor tipo pointer */
+    color: red; /* Color rojo */
+}
+
+
+.teoria-destacada {
+    background: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.teoria-destacada a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0000ff;
+    font-weight: bold;
+}
+
+/* ======================
+   NAVEGACIÓN RESPONSIVE
+   ====================== */
+
+/* Versión móvil (menú hamburguesa) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        gap: 10px;
+        display: none; /* Oculta el menú por defecto en móviles */
+        background-color: #333;
+        padding: 15px 0;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+
+    nav ul.show {
+        display: flex; /* Muestra el menú cuando tiene la clase 'show' */
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin: 10px auto;
+    }
+}
+
+/* Versión escritorio (se muestra horizontal) */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Oculta el botón en escritorio */
+    }
+
+    nav ul {
+        display: flex; /* Muestra el menú horizontalmente */
+    }
+}
+
+
+
+
+
+/* Estilos para sección de blog */
+.blog-container {
+    max-width: 800px; /* Ancho máximo */
+    margin: 20px auto; /* Centrado horizontal */
+    padding: 20px; /* Relleno interno */
+    background: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.post {
+    margin-bottom: 20px; /* Margen inferior */
+    padding: 15px; /* Relleno interno */
+    border-bottom: 1px solid #ddd; /* Borde inferior */
+}
+
+.post h2 {
+    color: #222; /* Color de texto oscuro */
+}
+
+.post .date {
+    font-size: 0.9em; /* Tamaño de fuente pequeño */
+    color: #777; /* Color de texto gris */
+}
+
+.post .excerpt {
+    margin-top: 10px; /* Margen superior */
+}
+
+/* Estilos para botones */
+button {
+    background-color: #007BFF; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px; /* Relleno interno */
+    cursor: pointer; /* Cursor tipo pointer */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+}
+
+button:hover {
+    background-color: #0056b3; /* Fondo azul oscuro al hover */
+}
+
+/* Estilos para posts completos */
+.full-post {
+    display: none; /* Oculto por defecto */
+    margin-top: 10px; /* Margen superior */
+    padding: 10px; /* Relleno interno */
+    background: #f9f9f9; /* Fondo gris claro */
+    border-left: 4px solid #007BFF; /* Borde izquierdo azul */
+}
+
+/* Estilos para sección de comentarios */
+.comment-section {
+    max-width: 800px; /* Ancho máximo */
+    margin: 20px auto; /* Centrado horizontal */
+    padding: 20px; /* Relleno interno */
+    background: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.comment-form textarea {
+    width: 100%; /* Ancho completo */
+    height: 100px; /* Altura fija */
+    padding: 10px; /* Relleno interno */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    resize: none; /* No redimensionable */
+}
+
+.comment-form button {
+    display: block; /* Mostrar como bloque */
+    width: 100%; /* Ancho completo */
+    margin-top: 10px; /* Margen superior */
+    background-color: #28a745; /* Fondo verde */
+}
+
+.comment-form button:hover {
+    background-color: #218838; /* Fondo verde oscuro al hover */
+}
+
+.comments {
+    margin-top: 20px; /* Margen superior */
+}
+
+.comments h3 {
+    margin-bottom: 10px; /* Margen inferior */
+    color: #222; /* Color de texto oscuro */
+}
+
+.comments ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin relleno */
+}
+
+.comments ul li {
+    background: #f1f1f1; /* Fondo gris claro */
+    padding: 10px; /* Relleno interno */
+    margin-bottom: 5px; /* Margen inferior */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para información de contacto */
+.contact-info {
+    padding: 40px; /* Relleno interno */
+    text-align: center; /* Centrado de texto */
+    background-color: white; /* Fondo blanco */
+    margin-top: 20px; /* Margen superior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.contact-info h2 {
+    font-size: 24px; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.contact-item {
+    font-size: 18px; /* Tamaño de fuente */
+    margin: 10px 0; /* Márgenes superior e inferior */
+}
+
+.contact-item i {
+    margin-right: 10px; /* Margen derecho */
+    color: #007BFF; /* Color azul */
+}
+
+/* Estilos para redes sociales */
+.social-media {
+    padding: 40px; /* Relleno interno */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    text-align: center; /* Centrado de texto */
+    margin-top: 20px; /* Margen superior */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.social-media h2 {
+    font-size: 24px; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.social-icons {
+    display: flex; /* Diseño flexible */
+    justify-content: center; /* Centrado horizontal */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.social-icon {
+    font-size: 30px; /* Tamaño de fuente grande */
+    color: #007BFF; /* Color azul */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.social-icon:hover {
+    color: #0056b3; /* Color azul oscuro al hover */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #222; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrado de texto */
+    padding: 1.5em; /* Relleno interno */
+    margin-top: 20px; /* Margen superior */
+}
+
+
+
+/*estilo para formularios*/
+
+
+/* ======================
+   ESTILOS PARA FORMULARIOS
+   ====================== */
+
+   .encuesta {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.encuesta h3 {
+    color: #222;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.encuesta form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.encuesta label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.encuesta input, 
+.encuesta textarea,
+.encuesta select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.encuesta input:focus, 
+.encuesta textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.encuesta textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.encuesta button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    margin-top: 10px;
+    background-color: #28a745;
+}
+
+.encuesta button[type="submit"]:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorías Conspirativas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4870/4870819.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Teorías Conspirativas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pagina_1_teorias.html">Teorías</a></li>
+                <li><a href="pagina_2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina_3_blog.html">Blog</a></li>
+                <li><a href="pagina_4_formulario.html">Formulario</a></li>
+                <li><a href="pagina_5_contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="grid-teorias">
+            <div class="card" data-titulo="Área 51 y los extraterrestres"
+                 data-descripcion="El Área 51 en Nevada ha sido objeto de teorías que afirman que el gobierno de EE.UU. esconde evidencia de contacto alienígena y tecnología extraterrestre."
+                 data-fuente="Fuente: The History Channel"
+                 data-imagen="area51.jpg">
+                <img src="https://m.media-amazon.com/images/S/pv-target-images/b9bfc3d8913de84dc3b0f6d00414651fc0e079bb135f392f1be2aacae9361e6d._SX1080_FMjpg_.jpg" alt="Área 51">
+                <h3>Área 51 y los extraterrestres</h3>
+                <p>¿Es un centro de contacto alienígena?</p>
+            </div>
+            
+            <div class="card" data-titulo="¿El alunizaje fue falso?"
+                 data-descripcion="Algunas personas creen que el alunizaje de 1969 fue un montaje grabado en un estudio, basándose en supuestas anomalías en las fotos y videos."
+                 data-fuente="Fuente: NASA"
+                 data-imagen="luna.jpg">
+                <img src="https://images.theconversation.com/files/284065/original/file-20190715-173342-vc4ayv.jpg?ixlib=rb-4.1.0&rect=0%2C821%2C3921%2C1961&q=45&auto=format&w=1356&h=668&fit=crop" alt="Alunizaje">
+                <h3>¿El alunizaje fue falso?</h3>
+                <p>Algunos creen que fue grabado en un estudio.</p>
+            </div>
+            
+            <div class="card" data-titulo="Los Chemtrails"
+                 data-descripcion="Algunas teorías sugieren que las estelas dejadas por aviones en el cielo contienen sustancias químicas utilizadas para control climático o manipulación de la población."
+                 data-fuente="Fuente: BBC News"
+                 data-imagen="chemtrails.jpg">
+                <img src="https://penncapital-star.com/wp-content/uploads/2024/03/DSC_4472-1536x1024.jpg" alt="Chemtrails">
+                <h3>Los Chemtrails</h3>
+                <p>¿Nos rocían con sustancias químicas?</p>
+            </div>
+            
+            <div class="card" data-titulo="Los Illuminati"
+                 data-descripcion="Se dice que un grupo secreto, los Illuminati, controla el mundo desde las sombras, influyendo en la economía, política y cultura global."
+                 data-fuente="Fuente: National Geographic"
+                 data-imagen="illuminati.jpg">
+                <img src="https://images.ecestaticos.com/p3tBqmAht9UB_BOgWfgHrodgJe4=/0x269:2271x1546/1200x675/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd7e%2F1e9%2F9b4%2Fd7e1e99b4c6187b1d8c717a39e5c2ab6.jpg" alt="Illuminati">
+                <h3>Los Illuminati</h3>
+                <p>¿Dominan el mundo en secreto?</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="overlay" id="popup-overlay">
+        <div class="popup" id="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="popup-title"></h2>
+            <img id="popup-img" src="" alt="">
+            <p id="popup-text"></p>
+            <p class="fuente" id="popup-fuente"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - Curiosidades Misteriosas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

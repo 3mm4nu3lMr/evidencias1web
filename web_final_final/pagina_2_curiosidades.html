@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades Misteriosas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4870/4870819.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Curiosidades Misteriosas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pagina_1_teorias.html">Teorías</a></li>
+                <li><a href="pagina_2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina_3_blog.html">Blog</a></li>
+                <li><a href="pagina_4_formulario.html">Formulario</a></li>
+                <li><a href="pagina_5_contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Descubre lo Inexplicable</h2>
+            <p>Explora algunas de las curiosidades más extrañas del mundo. Haz clic en una tarjeta para leer más.</p>
+        </section>
+
+        <section class="grid-curiosidades">
+            <!-- Tarjeta 1 -->
+            <div class="card" data-titulo="El Sonido del Espacio"
+                 data-descripcion="Aunque el espacio es un vacío, algunas ondas pueden viajar y ser captadas por instrumentos especiales de la NASA. En 2013, la sonda Voyager 1 grabó un sonido de plasma interestelar."
+                 data-fuente="Fuente: NASA, 2013"
+                 data-imagen="img/espacio.jpg">
+                <img src="https://www.laprensagrafica.com/__export/1699912489753/sites/prensagrafica/img/2023/11/13/5fd1466c9bad3.jpeg_554688467.jpeg " alt="El Sonido del Espacio">
+                <h3>El Sonido del Espacio</h3>
+                <p>¿Sabías que el espacio no es completamente silencioso?</p>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card" data-titulo="Las Momias Mejor Conservadas"
+                 data-descripcion="Algunas momias egipcias conservan piel y cabello después de miles de años debido a las condiciones de los sarcófagos. La momia de Ramsés II sigue asombrando a los científicos."
+                 data-fuente="Fuente: Museo del Louvre, 2020"
+                 data-imagen="img/momias.jpg">
+                <img src="https://www.museosdetenerife.org/wp-content/uploads/2020/05/momia-1.jpg" alt="Momias Increíbles">
+                <h3>Las Momias Mejor Conservadas</h3>
+                <p>Algunas momias aún tienen cabello intacto.</p>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card" data-titulo="La Medusa Inmortal"
+                 data-descripcion="La medusa Turritopsis dohrnii puede revertir su envejecimiento. En lugar de morir, vuelve a su fase de pólipo y reinicia su ciclo de vida, lo que la hace biológicamente inmortal."
+                 data-fuente="Fuente: National Geographic, 2015"
+                 data-imagen="img/medusa.jpg">
+                <img src="https://media.eitb.eus/multimedia/images/2022/08/30/2977556/20220830200452_medusa-inmortal_foto610x342.jpg" alt="Medusa Inmortal">
+                <h3>La Medusa Inmortal</h3>
+                <p>Esta criatura desafía la muerte.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contenedor del recuadro emergente -->
+    <div class="overlay" id="popup-overlay">
+        <div class="popup" id="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="popup-title"></h2>
+            <img id="popup-img" src="" alt="">
+            <p id="popup-text"></p>
+            <p class="fuente" id="popup-fuente"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - Curiosidades Misteriosas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
