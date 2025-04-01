@@ -1,0 +1,49 @@
+.contenedor{
+	position: relative;
+	background: lightgray;
+	height: 100px;
+
+
+}
+.caja1{
+	position: relative;
+	background: red;
+	height: 50px;
+	left: 10px ;
+
+}
+.caja2{
+	position: absolute;
+	background: lightskyblue;
+	height: 150px;
+	width: 150px;
+	left: 50px;
+	top: 25px;
+	z-index: 1;
+}
+.caja3{
+	position: absolute; /*Para determinar la posición y que se pueda mover a su gusto, el elemento no ocupara el espacio predefinido, sino lo podemos hacer a nuestro gusto*/
+	background: purple;
+	height: 125px;
+	width: 125px;
+	right: 100px;
+	top: 40px;
+	z-index: 2;/*Tiene que ser mayor para que pase por arriba de las demás cajas*/
+}
+.caja4{
+	position: absolute;
+	background: salmon;
+	height: 75px;
+	width: 75px;
+	right: 55px;
+	top: 55px;
+	z-index: 3;
+}
+.caja5{
+	border: 2px solid blue;
+	width: 50px;
+	position: fixed; /*Contenedor que permanece fijo*/
+	right: 0px;
+	bottom: 0px;
+	z-index: 4;
+}
