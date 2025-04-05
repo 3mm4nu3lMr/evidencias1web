@@ -1,0 +1,113 @@
+html{
+    background-color: rgb(106, 201, 169);
+}
+body {
+  font-family: times new roman, arial, comic sans;
+  padding: 20px;
+  line-height: 1.6;
+}
+h1{
+    text-align: center;
+}
+section {
+  margin-bottom: 40px;
+  border: 1px solid #000000;
+  padding: 18px;
+}
+
+section h2 {
+    text-align: center;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+
+.px {
+  width: 200px;
+  height: 50px;
+  background: #f88;
+  text-align: center;
+}
+
+.pt {
+  font-size: 12pt;
+  background: #fbb;
+  padding: 5px;
+}
+
+.pc {
+  font-size: 1pc;
+  background: #fcc;
+  padding: 5px;
+}
+
+.cm {
+  width: 3cm;
+  height: 1cm;
+  background: #afa;
+}
+
+.mm {
+  width: 30mm;
+  height: 10mm;
+  background: #9df;
+}
+
+.in {
+  width: 1in;
+  height: 1in;
+  background: #fa8;
+}
+
+
+.porcentaje {
+  width: 50%;
+  background: #bdf;
+}
+
+.em {
+  font-size: 2em;
+  background: #dff;
+}
+
+.rem {
+  font-size: 2rem;
+  background: #ffd;
+}
+
+.vw {
+  width: 50vw;
+  background: #dda;
+}
+
+.vh {
+  height: 30vh;
+  background: #cfc;
+}
+
+.ex {
+  font-size: 20px;
+  height: 3ex;
+  background: #fdf;
+}
+
+.ch {
+  width: 25ch;
+  background: #638db3;
+  font-family: monospace;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.grid div {
+  background: rgb(235, 15, 15);
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
