@@ -75,16 +75,6 @@ section h2 {
   background: #ffd;
 }
 
-.vw {
-  width: 50vw;
-  background: #dda;
-}
-
-.vh {
-  height: 30vh;
-  background: #cfc;
-}
-
 .ex {
   font-size: 20px;
   height: 3ex;
