@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4870/4870819.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="pagina_principal.html">Inicio</a></li>
+                <li><a href="pagina_1_teorias.html">Teorías</a></li>
+                <li><a href="pagina_2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina_3_blog.html">Blog</a></li>
+                <li><a href="pagina_4_formulario.html">Formulario</a></li>
+                <li><a href="pagina_5_contactos.html">Contacto</a></li>
+                <li><a href="pagina_6_ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--<section class="blog-container">
+            <article class="post">
+                <h2>El Misterio del Triángulo de las Bermudas</h2>
+                <p class="date">Publicado el 30 de marzo de 2025</p>
+                <p class="excerpt">El Triángulo de las Bermudas ha sido objeto de muchas teorías y especulaciones...</p>
+                <button onclick="togglePost(0)">Leer más</button>
+                <div class="full-post" id="post-0">
+                    <p>Muchos creen que fenómenos paranormales o incluso actividad extraterrestre pueden estar detrás de las desapariciones...</p>
+                    <p class="fuente">Fuente: National Geographic</p>
+                </div>
+            </article>
+            <article class="post">
+                <h2>El Código Secreto de Leonardo da Vinci</h2>
+                <p class="date">Publicado el 25 de marzo de 2025</p>
+                <p class="excerpt">Leonardo da Vinci dejó tras de sí innumerables misterios en sus obras...</p>
+                <button onclick="togglePost(1)">Leer más</button>
+                <div class="full-post" id="post-1">
+                    <p>Desde la Última Cena hasta el Hombre de Vitruvio, muchas teorías han intentado descifrar sus mensajes ocultos...</p>
+                    <p class="fuente">Fuente: Historia y Arte</p>
+                </div>
+            </article>
+        </section>
+        -->
+        <section class="comment-section">
+            <h2>Deja tu comentario</h2>
+            <form class="comment-form">
+                <textarea placeholder="Escribe tu opinión aquí..." required></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+            <div class="comments">
+                <h3>Comentarios</h3>
+                <ul id="comment-list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function togglePost(index) {
+            const post = document.getElementById(`post-${index}`);
+            post.style.display = (post.style.display === "block") ? "none" : "block";
+        }
+
+        document.querySelector(".comment-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const commentText = this.querySelector("textarea").value;
+            if (commentText.trim() !== "") {
+                const commentList = document.getElementById("comment-list");
+                const newComment = document.createElement("li");
+                newComment.textContent = commentText;
+                commentList.appendChild(newComment);
+                this.querySelector("textarea").value = "";
+            }
+        });
+    </script>
+</body>
+</html>
