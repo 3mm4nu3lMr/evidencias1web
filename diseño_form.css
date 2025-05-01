@@ -1,0 +1,59 @@
+body{
+	text-align: center;
+	background: lightgray;
+	font-family: Verdana, arial, sans-serif;
+}
+h1{
+	padding: 10px;
+	height: 30px;
+	max-width: 500px;
+	margin: auto;
+	background-color: rgb(241, 204, 103);
+}
+label{
+	font-size: 18px;
+}
+#datos{
+	text-align: center;
+	background: lightcyan;
+	max-width: 500px;
+	margin: auto;
+	
+
+}
+select{
+	border: 2px solid black;
+	border-radius: 5px;
+	height: 25px;
+}
+input[type="button"] {
+    padding: 5px;
+    border: 1px solid #000000;
+    font-size: 15px;
+    width: 10%;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+input[type="button"]:hover {
+    padding: 5px;
+    border: 1px solid black;
+    background-color: rgb(241, 204, 103);
+    font-size: 15px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+input[type="password"]{
+border: 2px solid black;
+border-radius: 5px;
+height: 25px;
+}
+
+input[type="text"]{
+	border: 2px solid black;
+	border-radius: 5px;
+	height: 25px;
+}
+form{
+	background-color: rgb(106, 184, 136);
+}
