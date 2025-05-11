@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Práctica 3</title>
+	<link rel="stylesheet" type="text/css" href="práctica3diseño - copia.css">
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+	<script src="practica3cham.js"></script>
+
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+
+	 
+	 <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/%DA%86%D8%A7%D9%85%D9%BE%DB%8C%DB%86%D9%86%D8%B2%D9%84%DB%8C%DA%AF.png/640px-%DA%86%D8%A7%D9%85%D9%BE%DB%8C%DB%86%D9%86%D8%B2%D9%84%DB%8C%DA%AF.png" type="image/png">
+</head>
+<body>
+	<h1>¿Qué tanto sabes de la competición más importante de fútbol en Europa (UEFA Champions League)?</h1>
+	<form id="formulario">
+		<label for="user">Nombre de usuario:</label><br/>
+		<input type="text" name="user" id="user" placeholder="Nombre de usuario"><br/><br/><br/>
+				<label for="preguntas">Pregunta 1: ¿Quién es el máximo goleador de la competición?</label><br/>
+				<input type="radio" name="maxgol" id="maxgola" value="CR7">Cristiano Ronaldo<br/>
+				<input type="radio" name="maxgol" id="maxgolb" value="R9">Ronaldo Nazario<br/>
+				<input type="radio" name="maxgol" id="maxgolc" value="FP">Ferrenc Puskas<br/><br/>
+
+				<label for="preguntas">Pregunta 2: ¿En qué año ganó el FC Barcelona su última Champions?</label><br/>
+				<input type="radio" name="chbar" id="chbara" value="BarcCh1">2015<br/>
+				<input type="radio" name="chbar" id="chbarb" value="BarcCh2">2014<br/>
+				<input type="radio" name="chbar" id="chbarc" value="BarcCh3">2012<br/><br/>
+
+				<label for="preguntas">Pregunta 3: ¿Quién fue el portero de las tres Champions seguidas del Real Madrid?</label><br/>
+				<input type="radio" name="Port" id="Porta" value="Port1">Gianluigi Buffon<br/>
+				<input type="radio" name="Port" id="Portb" value="Port2">Andre Ter-Stegen<br/>
+				<input type="radio" name="Port" id="Portc" value="Port3">Keylor Navas<br/><br/>
+
+				<label for="preguntas">Pregunta 4: ¿Zlatan Ibrahimovic ha ganado alguna Champions?</label><br/>
+				<input type="radio" name="ZI" id="ZIa" value="ZI1">Si<br/>
+				<input type="radio" name="ZI" id="ZIb" value="ZI2">No<br/><br/>
+
+				<label for="preguntas">Pregunta 5: ¿Qué equipo le metió 8 goles al Barcelona en la Champions del COVID?</label><br/>
+				<input type="radio" name="gol8-2" id="gol8-2a" value="BL">Bayer Leverkusen <br/>
+				<input type="radio" name="gol8-2" id="gol8-2b" value="RM">Real Madrid<br/>
+				<input type="radio" name="gol8-2" id="gol8-2c" value="BM">Bayern Munchen<br/><br/>
+
+				<label for="preguntas">Pregunta 6: ¿Qué equipo ha ganado más Champions League?</label><br/>
+				<input type="radio" name="masChamp" id="masChamp1" value="RM">Real Madrid<br/>
+				<input type="radio" name="masChamp" id="masChamp2" value="ACM">AC Milan<br/>
+				<input type="radio" name="masChamp" id="masChamp3" value="LIV">Liverpool<br/><br/>
+
+				<label for="preguntas">Pregunta 7: ¿Qué jugador marcó un hat-trick más rápido en la historia de la Champions?</label><br/>
+				<input type="radio" name="hatTrick" id="hatTrick1" value="CR7">Cristiano Ronaldo<br/>
+				<input type="radio" name="hatTrick" id="hatTrick2" value="Benzema">Karim Benzema<br/>
+				<input type="radio" name="hatTrick" id="hatTrick3" value="Salah">Mohamed Salah<br/><br/>
+
+				<label for="preguntas">Pregunta 8: ¿Qué club inglés ganó la Champions en 2021?</label><br/>
+				<input type="radio" name="champ2021" id="champ2021a" value="CHE">Chelsea<br/>
+				<input type="radio" name="champ2021" id="champ2021b" value="MCI">Manchester City<br/>
+				<input type="radio" name="champ2021" id="champ2021c" value="LIV">Liverpool<br/><br/>
+
+				<label for="preguntas">Pregunta 9: ¿Cuál de estos equipos nunca ha ganado la Champions?</label><br/>
+				<input type="radio" name="nunca" id="nunca1" value="ARS">Arsenal<br/>
+				<input type="radio" name="nunca" id="nunca2" value="MU">Manchester United<br/>
+				<input type="radio" name="nunca" id="nunca3" value="INT">Inter de Milán<br/><br/>
+
+				<label for="preguntas">Pregunta 10: ¿Qué equipo ganó la Champions en 1999 con un gol en el último minuto?</label><br/>
+				<input type="radio" name="champ1999" id="champ1999a" value="MU">Manchester United<br/>
+				<input type="radio" name="champ1999" id="champ1999b" value="BM">Bayern Múnich<br/>
+				<input type="radio" name="champ1999" id="champ1999c" value="JUV">Juventus<br/><br/>
+
+				<div id="resultado" style="text-align:center; font-size:20px; margin-top:20px;"></div>
+				<input type="button" name="envio" id="envio" value="Obtener puntuación" onclick="leer()">
+
+				
+				<input type="button" name="envio2" id="envio2" value="Obtener gráfico" onclick="generar()">
+				<div id="chart_div"></div>
+
+				<input type="button" name="envio3" id="envio3" value="Descargar PDF" onclick="pdf()">
+				<iframe src="" frameborder="0" width="500" height="600" id="visorPDF"></iframe>
+
+			
+	</form>
+
+</body>
+</html>
