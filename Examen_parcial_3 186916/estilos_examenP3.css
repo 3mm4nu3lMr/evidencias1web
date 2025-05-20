@@ -1,0 +1,36 @@
+body{
+	text-align: center;
+	font-family: arial, verdana, times new roman;
+}
+form{
+	
+}
+h1{
+	text-align: center;
+}
+select{
+	width: 60%;
+	padding: 7px;
+	border: 2px solid black;
+}
+label{
+	font-size: 18px;
+}
+input[type=number]{
+	padding: 7px;
+	width: 60%;
+	border: 2px solid black;
+	background-color: white;
+
+}
+input[type=button]{
+	padding: 7px;
+	width: 60%;
+
+}
+input[type=button]:hover{
+	background: lightgray;
+	padding: 7px;
+	width: 60%;
+
+}
