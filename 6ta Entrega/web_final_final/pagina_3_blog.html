@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4870/4870819.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Blog de Teorías y Experiencias</h1>
+        <nav>
+            <ul>
+                <li><a href="pagina_principal.html">Inicio</a></li>
+                <li><a href="pagina_1_teorias.html">Teorías</a></li>
+                <li><a href="pagina_2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina_3_blog.html">Blog</a></li>
+                <li><a href="pagina_4_formulario.html">Formulario</a></li>
+                <li><a href="pagina_5_contactos.html">Contacto</a></li>
+                <li><a href="pagina_6_ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Comparte tus teorías y experiencias</h2>
+            <p>Este es un espacio para que compartas tus propias teorías conspirativas, experiencias personales, dudas o comentarios sobre los temas que hemos tratado.</p>
+        </section>
+
+        <section class="comment-section">
+            <h2>Publica tu comentario</h2>
+            <form class="comment-form" id="comment-form">
+                <div class="form-group">
+                    <label for="comment-name">Tu nombre:</label>
+                    <input type="text" id="comment-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment-text">Tu comentario:</label>
+                    <textarea id="comment-text" placeholder="Escribe tu teoría, experiencia o comentario aquí..." required></textarea>
+                </div>
+                <button type="submit">Publicar</button>
+            </form>
+            
+            <div class="comments">
+                <h3>Comentarios recientes</h3>
+                <div id="comment-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Blog de Teorías Conspirativas</p>
+    </footer>
+
+    <script>
+        // Función para cargar comentarios guardados
+        function loadComments() {
+            const savedComments = localStorage.getItem('blogComments');
+            if (savedComments) {
+                document.getElementById('comment-list').innerHTML = savedComments;
+            }
+        }
+
+        // Función para guardar un nuevo comentario
+        function saveComment(name, text) {
+            const commentElement = document.createElement('div');
+            commentElement.className = 'comment-item';
+            
+            const nameElement = document.createElement('h4');
+            nameElement.textContent = name;
+            
+            const textElement = document.createElement('p');
+            textElement.textContent = text;
+            
+            const dateElement = document.createElement('small');
+            dateElement.textContent = new Date().toLocaleString();
+            
+            commentElement.appendChild(nameElement);
+            commentElement.appendChild(textElement);
+            commentElement.appendChild(dateElement);
+            
+            const commentList = document.getElementById('comment-list');
+            commentList.insertBefore(commentElement, commentList.firstChild);
+            
+            // Guardar en localStorage
+            localStorage.setItem('blogComments', commentList.innerHTML);
+        }
+
+        // Manejar el envío del formulario
+        document.getElementById('comment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('comment-name').value.trim();
+            const text = document.getElementById('comment-text').value.trim();
+            
+            if (name && text) {
+                saveComment(name, text);
+                document.getElementById('comment-form').reset();
+            }
+        });
+
+        // Cargar comentarios al iniciar la página
+        document.addEventListener('DOMContentLoaded', loadComments);
+    </script>
+    
+    <script>
+    window.addEventListener('mouseover', initLandbot, { once: true });
+    window.addEventListener('touchstart', initLandbot, { once: true });
+    var myLandbot;
+    function initLandbot() {
+      if (!myLandbot) {
+        var s = document.createElement('script');
+        s.type = "module"
+        s.async = true;
+        s.addEventListener('load', function() {
+          myLandbot = new Landbot.Popup({
+            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2930386-7LSGN70C7DVKN6B1/index.json',
+          });
+        });
+        s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda - Teorías Conspirativas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4870/4870819.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Centro de Ayuda</h1>
+        <nav>
+            <ul>
+                <li><a href="pagina_principal.html">Inicio</a></li>
+                <li><a href="pagina_1_teorias.html">Teorías</a></li>
+                <li><a href="pagina_2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina_3_blog.html">Blog</a></li>
+                <li><a href="pagina_4_formulario.html">Formulario</a></li>
+                <li><a href="pagina_5_contactos.html">Contacto</a></li>
+                <li><a href="pagina_6_ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>¿Cómo podemos ayudarte?</h2>
+            <p>Encuentra respuestas a las preguntas más comunes y recursos útiles.</p>
+        </section>
+
+        <section class="faq-section">
+            <h2>🔍 Preguntas Frecuentes</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">¿Cómo puedo enviar una teoría o curiosidad?</button>
+                <div class="faq-answer">
+                    <p>Puedes compartir tus teorías o curiosidades a través de nuestro <a href="pagina_4_formulario.html">formulario de envíos</a>. Nuestro equipo las revisará y publicará las más interesantes.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">¿Cómo verifican la información?</button>
+                <div class="faq-answer">
+                    <p>Nuestro equipo investiga cada tema utilizando múltiples fuentes confiables antes de publicar. Siempre indicamos las fuentes utilizadas.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">¿Puedo editar o eliminar mi comentario?</button>
+                <div class="faq-answer">
+                    <p>Actualmente no permitimos ediciones directas, pero puedes contactarnos en <a href="pagina_5_contactos.html">nuestra página de contacto</a> para solicitar cambios.</p>
+                </div>
+            </div>
+        </section>
+        <!--
+        <section class="resources-section">
+            <h2>📚 Recursos Útiles</h2>
+            <div class="resource-cards">
+                <div class="resource-card">
+                    <h3>Guía para nuevos usuarios</h3>
+                    <p>Aprende a navegar y aprovechar al máximo nuestro sitio.</p>
+                    <a href="#" class="btn">Ver guía</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>Normas de la comunidad</h3>
+                    <p>Conoce nuestras reglas para mantener debates saludables.</p>
+                    <a href="#" class="btn">Leer normas</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>Glosario de términos</h3>
+                    <p>Explicación de conceptos comunes en teorías conspirativas.</p>
+                    <a href="#" class="btn">Consultar</a>
+                </div>
+            </div>
+        </section>
+        -->
+        <section class="contact-help">
+            <h2>📬 ¿No encontraste lo que buscabas?</h2>
+            <p>Contáctanos directamente y nuestro equipo te ayudará:</p>
+            <a href="pagina_5_contactos.html" class="btn">Ir a Contacto</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Teorías Conspirativas. Universidad Politécnica de San Luis Potosí</p>
+    </footer>
+
+    <script>
+        // FAQ interactivo
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                question.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

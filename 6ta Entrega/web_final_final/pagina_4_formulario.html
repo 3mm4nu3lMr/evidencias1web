@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Teorías Conspirativas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4870/4870819.png" type="image/png">
+    <!-- Librería para generar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Quiz de Teorías Conspirativas</h1>
+        <nav>
+            <ul>
+                <li><a href="pagina_principal.html">Inicio</a></li>
+                <li><a href="pagina_1_teorias.html">Teorías</a></li>
+                <li><a href="pagina_2_curiosidades.html">Curiosidades</a></li>
+                <li><a href="pagina_3_blog.html">Blog</a></li>
+                <li><a href="pagina_4_formulario.html">Formulario</a></li>
+                <li><a href="pagina_5_contactos.html">Contacto</a></li>
+                <li><a href="pagina_6_ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>¿Cuánto sabes sobre teorías conspirativas?</h2>
+            <p>Responde este quiz y descubre tu nivel de conocimiento. Al final podrás descargar tus resultados en PDF.</p>
+        </section>
+
+        <section class="encuesta">
+            <form id="quiz-form">
+                <div class="form-section">
+                    <h3>Información personal</h3>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-section">
+                    <h3>Preguntas sobre teorías conspirativas</h3>
+                    
+                    <div class="pregunta">
+                        <p>1. ¿Qué se dice que oculta el gobierno en el Área 51?</p>
+                        <label>
+                            <input type="radio" name="p1" value="a" required> Tecnología extraterrestre
+                        </label>
+                        <label>
+                            <input type="radio" name="p1" value="b"> Armas nucleares secretas
+                        </label>
+                        <label>
+                            <input type="radio" name="p1" value="c"> Reservas de oro
+                        </label>
+                    </div>
+
+                    <div class="pregunta">
+                        <p>2. ¿Qué teoría sugiere que el alunizaje de 1969 fue falso?</p>
+                        <label>
+                            <input type="radio" name="p2" value="a" required> Teoría del montaje lunar
+                        </label>
+                        <label>
+                            <input type="radio" name="p2" value="b"> Teoría de la Tierra plana
+                        </label>
+                        <label>
+                            <input type="radio" name="p2" value="c"> Teoría del holograma cósmico
+                        </label>
+                    </div>
+
+                    <div class="pregunta">
+                        <p>3. ¿Qué son los "chemtrails" según las teorías conspirativas?</p>
+                        <label>
+                            <input type="radio" name="p3" value="a" required> Estelas químicas para control climático
+                        </label>
+                        <label>
+                            <input type="radio" name="p3" value="b"> Rutas de vuelo secretas
+                        </label>
+                        <label>
+                            <input type="radio" name="p3" value="c"> Un fenómeno meteorológico natural
+                        </label>
+                    </div>
+
+                    <div class="pregunta">
+                        <p>4. ¿Quiénes son los Illuminati según las teorías?</p>
+                        <label>
+                            <input type="radio" name="p4" value="a" required> Un grupo secreto que controla el mundo
+                        </label>
+                        <label>
+                            <input type="radio" name="p4" value="b"> Una sociedad científica del siglo XVIII
+                        </label>
+                        <label>
+                            <input type="radio" name="p4" value="c"> Una orden religiosa medieval
+                        </label>
+                    </div>
+
+                    <div class="pregunta">
+                        <p>5. ¿Qué teoría sugiere que las vacunas tienen objetivos ocultos?</p>
+                        <label>
+                            <input type="radio" name="p5" value="a" required> Teoría del microchip en vacunas
+                        </label>
+                        <label>
+                            <input type="radio" name="p5" value="b"> Teoría de la inmunidad artificial
+                        </label>
+                        <label>
+                            <input type="radio" name="p5" value="c"> Teoría de la modificación genética
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Tu opinión</h3>
+                    <label for="comentarios">¿Cuál es tu teoría conspirativa favorita y por qué?</label>
+                    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                </div>
+
+                <button type="submit">Enviar respuestas</button>
+            </form>
+
+            <div id="resultados" style="display: none;">
+                <h3>Tu resultado</h3>
+                <p id="puntaje"></p>
+                <p id="nivel"></p>
+                <button id="descargar-pdf">Descargar resultados en PDF</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Quiz de Teorías Conspirativas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+        
+    
+</body>
+</html>
